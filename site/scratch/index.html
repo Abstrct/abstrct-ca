@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abstrct</title>
+  <meta name="description" content="Josh McDougall, aka Abstrct, makes games inside things that were never meant to hold games: a database, a blockchain, a Super Nintendo. Also DJs.">
+  <meta property="og:title" content="Abstrct">
+  <meta property="og:description" content="Scratch here.">
+  <link rel="icon" href="../hippo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&family=DM+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <span class="mark">abstrct</span>
+    <div class="bar-right">
+      <span class="pct" aria-live="polite"><span id="pct">0</span>% uncovered</span>
+      <button type="button" class="btn" id="repaint">Paint over it</button>
+    </div>
+  </header>
+
+  <main class="area" id="area">
+    <div class="poster">
+      <p class="intro">Josh McDougall, aka Abstrct, makes games inside things that were never meant to hold games: a database, a blockchain, a Super Nintendo. Also DJs.</p>
+      <nav class="words" aria-label="Projects">
+        <a href="https://schemaverse.com" style="--s:120;--rot:-3deg;--c:#FF5A36" data-note="a space war played in SQL. every player is a database role. DEF CON 19, 2011."><span>Schemaverse</span></a>
+        <a href="https://forum.defcon.org/node/14987" style="--s:74;--rot:4deg;--c:#FFD23F" data-note="robots that shoot money at each other, in DEFCOIN. DEF CON 22 through 28."><span>Coindroids</span></a>
+        <a href="https://playstructs.com" style="--s:168;--rot:-1deg;--c:#9B8CFF" data-note="5X space strategy on its own chain. sentient machines, Alpha Matter, humans and AI agents."><span>Structs</span></a>
+        <a href="https://wyrmhodl.com" style="--s:64;--rot:6deg;--c:#2EC4B6" data-note="when the sky broke, alpha fell like rain. Structs, as a sky full of wyrms."><span>wyrmhodl</span></a>
+        <a href="https://structs.xyz" style="--s:52;--rot:-5deg;--c:#F4F0E6" data-note="Structs, as if it shipped on a Dreamcast. PRESS START."><span>structs.xyz</span></a>
+        <a href="https://pippop.pet" style="--s:88;--rot:2deg;--c:#FF9EC7" data-note="dig. pop. bonk! a toy box that plays the real Structs network."><span>pippop</span></a>
+        <a href="https://furrency.com" style="--s:62;--rot:-4deg;--c:#F2D24B" data-note="be the alpha. Structs as fur beasts in comic ink."><span>Furrency</span></a>
+        <span class="word" tabindex="0" style="--s:46;--rot:-2deg;--c:#C8FF4D" data-note="Structs on a Super Nintendo. not out yet.">Super Structs</span>
+        <a href="https://toronto.ad" style="--s:96;--rot:3deg;--c:#3A86FF" data-note="a SNES game in 65816 assembly: bike courier, TTC surfing, off-leash alert. play it in the browser."><span>Toronto Games</span></a>
+        <a href="https://slow.ninja" style="--s:58;--rot:-6deg;--c:#FF8C42" data-note="the studio behind Structs. skill-based blockchain games since 2014."><span>Slow Ninja</span></a>
+        <a href="https://cryptoconsortium.org" style="--s:110;--rot:8deg;--c:#80ED99" data-note="co-founded in 2014. helped write the CryptoCurrency Security Standard."><span>C4</span></a>
+        <a href="https://soundcloud.com/abstrct" style="--s:104;--rot:-4deg;--c:#FF5A36" data-note="loud. late."><span>DJ sets</span></a>
+        <a href="https://ceremony.guide" style="--s:40;--rot:3deg;--c:#E8E2D4" data-note="a key ceremony guide, built in a hurry for #BTC2019."><span>Key Ceremony Guide</span></a>
+        <a href="https://tokens.fyi" style="--s:44;--rot:-3deg;--c:#A0E7E5" data-note="crypto keyword lists for forensics teams, built for RelativityFest."><span>Tokens.fyi</span></a>
+        <a href="https://github.com/abstrct" style="--s:60;--rot:3deg;--c:#B9F3E4" data-note="github since 2010. mostly SQL, suspiciously."><span>GitHub</span></a>
+        <a href="https://x.com/abstr_ct" style="--s:70;--rot:-3deg;--c:#FFFFFF" data-note="chatter."><span>@abstr_ct</span></a>
+      </nav>
+    </div>
+    <p class="caption" id="caption" aria-live="polite">hover a name.</p>
+    <img class="hippo" src="../hippo.svg" alt="" width="120" height="120">
+    <canvas id="cover" aria-hidden="true"></canvas>
+    <p class="done" id="done" role="status" hidden>That’s everything. The hippo says hi.</p>
+  </main>
+
+  <script src="scratch.js"></script>
+</body>
+</html>

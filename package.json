@@ -1,0 +1,13 @@
+{
+  "name": "abstrct.ca",
+  "private": true,
+  "description": "Josh McDougall's personal site. Static files in site/, deployed to GitHub Pages.",
+  "type": "module",
+  "scripts": {
+    "dev": "node dev.mjs",
+    "start": "node dev.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

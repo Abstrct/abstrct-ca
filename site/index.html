@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AS-1: The Abstrct Standard</title>
+  <meta name="description" content="Josh McDougall, aka Abstrct, specified as a standard. The Subject MUST put a game inside a Medium.">
+  <meta property="og:title" content="AS-1: The Abstrct Standard">
+  <meta property="og:description" content="This memo defines a person. Distribution of this memo is unlimited, which is generous, since nobody asked for it.">
+  <meta name="theme-color" content="#FBFBF8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="hippo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #FBFBF8; --ink: #161616; --dim: #5F5F5A; --rule: #DADAD3; --link: #1747D1; --mark: #FFF2A8; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #141414; --ink: #EDEDE8; --dim: #A3A39C; --rule: #333330; --link: #8EB0FF; --mark: #4A4220; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.65 'IBM Plex Mono', ui-monospace, monospace; }
+    main { max-width: 74ch; margin: 0 auto; padding: 48px 20px 80px; }
+    a { color: var(--link); }
+    .head { display: grid; grid-template-columns: 1fr auto; gap: 0 24px; color: var(--dim); font-size: 14px; }
+    .head span:nth-child(even) { text-align: right; }
+    h1 { font-size: 20px; font-weight: 600; text-align: center; margin: 48px 0 40px; }
+    h2 { font-size: 15px; font-weight: 600; margin: 36px 0 8px; }
+    p, ul { margin: 0 0 12px; padding-left: 3ch; }
+    ul { list-style: none; }
+    li { position: relative; }
+    li::before { content: "-"; position: absolute; left: -2ch; color: var(--dim); }
+    .kw { font-weight: 600; }
+    .dots { display: flex; gap: 1ch; }
+    .dots span:nth-child(2) { flex: 1; overflow: hidden; color: var(--rule); white-space: nowrap; }
+    .dots span:nth-child(2)::before { content: "........................................................................"; }
+    mark { background: var(--mark); color: inherit; padding: 0 2px; }
+    .foot { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--dim); font-size: 13px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    @media (max-width: 560px) { .head { grid-template-columns: 1fr; } .head span:nth-child(even) { text-align: left; margin-bottom: 6px; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="head">
+    <span>Abstrct Working Group</span><span>J. McDougall</span>
+    <span>Request for Comments: 0</span><span>Abstrct</span>
+    <span>Category: Informational, mostly</span><span>October 2026</span>
+    <span>Obsoletes: abstrct.com</span><span>Errata: none acknowledged</span>
+  </div>
+
+  <h1>AS-1: The Abstrct Standard</h1>
+
+  <h2>Status of This Memo</h2>
+  <p>This memo defines a person. Distribution of this memo is unlimited, which is generous, since nobody asked for it.</p>
+
+  <h2>1. Terminology</h2>
+  <p>The key words <span class="kw">MUST</span>, <span class="kw">MUST NOT</span>, <span class="kw">SHOULD</span> and <span class="kw">MAY</span> are to be interpreted as described in RFC 2119. The key word <span class="kw">GAME</span> is to be interpreted as broadly as possible, and then a bit more.</p>
+
+  <h2>2. Definitions</h2>
+  <p><span class="kw">Subject:</span> Josh McDougall, also known as Abstrct. No vowel was harmed in the making of this handle. It simply wasn’t invited.</p>
+  <p><span class="kw">Medium:</span> any system that was not designed to contain a game.</p>
+
+  <h2>3. Requirements</h2>
+  <p>3.1. The Subject <span class="kw">MUST</span> put a game inside a Medium. Conformance has been demonstrated against:</p>
+  <ul>
+    <li class="dots"><span>a PostgreSQL database</span><span aria-hidden="true"></span><span><a href="https://schemaverse.com">Schemaverse</a> (DEF CON 19, 2011)</span></li>
+    <li class="dots"><span>a cryptocurrency</span><span aria-hidden="true"></span><span>Coindroids (DEF CON 22–28)</span></li>
+    <li class="dots"><span>an entire blockchain</span><span aria-hidden="true"></span><span><a href="https://playstructs.com">Structs</a></span></li>
+    <li class="dots"><span>a Super Nintendo</span><span aria-hidden="true"></span><span><a href="https://toronto.ad">Toronto Games</a></span></li>
+  </ul>
+  <p>3.2. Once a game exists, the Subject <span class="kw">SHOULD</span> make it again in a different hat. Structs is currently also available as a toy box (<a href="https://pippop.pet">pippop</a>), a sky full of dragons (<a href="https://wyrmhodl.com">wyrmhodl</a>), a Dreamcast game (<a href="https://structs.xyz">structs.xyz</a>) and some fur beasts (<a href="https://furrency.com">Furrency</a>). A Super Nintendo hat is in progress.</p>
+  <p>3.3. The Subject <span class="kw">MAY</span> build a useful tool very quickly while a conference is already under way. See <a href="https://tokens.fyi">Tokens.fyi</a> and the <a href="https://ceremony.guide">Key Ceremony Guide</a>.</p>
+  <p>3.4. The Subject <span class="kw">MUST NOT</span> be asked to stop. Implementations that ask anyway are non-conformant.</p>
+
+  <h2>4. Security Considerations</h2>
+  <p>The Subject co-founded <a href="https://cryptoconsortium.org">C4</a> and helped write the CryptoCurrency Security Standard, which is a real standard. <mark>This one is not.</mark></p>
+  <p>Schemaverse was built so people could try to break into it. They did. That was the point.</p>
+
+  <h2>5. Interoperability</h2>
+  <p>The Subject also DJs. Sets are available over <a href="https://soundcloud.com/abstrct">SoundCloud</a>. No conformance testing has been carried out on the dance floor.</p>
+
+  <h2>6. IANA Considerations</h2>
+  <p>None. IANA has not been told.</p>
+
+  <h2>7. References</h2>
+  <ul>
+    <li>[STUDIO] <a href="https://slow.ninja">slow.ninja</a></li>
+    <li>[CODE] <a href="https://github.com/abstrct">github.com/abstrct</a></li>
+    <li>[CHATTER] <a href="https://x.com/abstr_ct">x.com/abstr_ct</a></li>
+  </ul>
+
+  <h2>Appendix A. Rejected Drafts</h2>
+  <p>Earlier drafts of this document were withdrawn for being too much. They are listed here for the record.</p>
+  <ul>
+    <li>A.1. A text adventure. Too many rooms.</li>
+    <li>A.2. A vending machine. Exact change only, which nobody had.</li>
+    <li>A.3. A tarot deck. Predicted this outcome.</li>
+    <li>A.4. A hippo. Retained as a mascot.</li>
+    <li>A.5. A scratch card. <a href="scratch/">Still available</a>, for completeness.</li>
+  </ul>
+
+  <h2>Author’s Address</h2>
+  <p>You are standing in it.</p>
+
+  <div class="foot"><span>McDougall · Informational</span><span>[Page 1 of 1]</span></div>
+</main>
+</body>
+</html>

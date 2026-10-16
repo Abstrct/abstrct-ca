@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Josh McDougall</title>
+  <meta name="description" content="Josh McDougall, aka Abstrct, puts games inside things that aren't supposed to have games in them.">
+  <link rel="icon" href="../hippo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #F7F4EE; --ink: #1C1A17; --dim: #6B655C; --rule: #D9D3C7; --accent: #C2411C; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #161513; --ink: #EDE8DF; --dim: #A69F94; --rule: #34312C; --accent: #FF7A4D; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; }
+    main { max-width: 820px; margin: 0 auto; padding: 72px 24px 96px; }
+    a { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 4px; }
+    a:hover { text-decoration-color: var(--accent); }
+    sup a { color: var(--accent); text-decoration: none; font-size: 0.55em; padding: 0 2px; }
+    .lede { font-size: clamp(30px, 4.6vw, 52px); line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 48px; }
+    .list { list-style: none; margin: 0 0 64px; padding: 0; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.35; }
+    .list li { padding: 10px 0; border-top: 1px solid var(--rule); }
+    .list li:last-child { border-bottom: 1px solid var(--rule); }
+    .list .what { color: var(--dim); font-style: italic; font-size: 0.72em; margin-left: 10px; white-space: nowrap; }
+    .notes { margin: 0; padding: 0 0 0 1.6em; font-size: 16px; line-height: 1.55; color: var(--dim); }
+    .notes li { margin: 0 0 10px; padding-left: 4px; }
+    .notes li::marker { color: var(--accent); }
+    .notes li:target { color: var(--ink); }
+    .sign { margin-top: 56px; font-size: 15px; color: var(--dim); display: flex; flex-wrap: wrap; gap: 6px 22px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="lede">Josh McDougall<sup><a href="#n1" id="r1" aria-label="Note 1">1</a></sup> puts games inside things that aren’t supposed to have games in them.<sup><a href="#n2" id="r2" aria-label="Note 2">2</a></sup></p>
+
+  <ul class="list">
+    <li><a href="https://schemaverse.com">Schemaverse</a><sup><a href="#n3" aria-label="Note 3">3</a></sup> <span class="what">a space war inside a database</span></li>
+    <li><span>Coindroids</span><sup><a href="#n4" aria-label="Note 4">4</a></sup> <span class="what">robots that shoot money</span></li>
+    <li><a href="https://playstructs.com">Structs</a><sup><a href="#n5" aria-label="Note 5">5</a></sup> <span class="what">a space game on its own blockchain</span></li>
+    <li><a href="https://toronto.ad">Toronto Games</a><sup><a href="#n6" aria-label="Note 6">6</a></sup> <span class="what">a Super Nintendo game about Toronto</span></li>
+    <li><a href="https://cryptoconsortium.org">C4</a><sup><a href="#n7" aria-label="Note 7">7</a></sup> <span class="what">rules, for once</span></li>
+    <li><a href="https://soundcloud.com/abstrct">DJ sets</a><sup><a href="#n8" aria-label="Note 8">8</a></sup> <span class="what">loud</span></li>
+  </ul>
+
+  <ol class="notes">
+    <li id="n1">Also known as Abstrct. The missing vowel is not a typo. It left of its own accord.</li>
+    <li id="n2">So far: a database, a cryptocurrency, a blockchain and a Super Nintendo. Your fridge is probably fine.</li>
+    <li id="n3">Played by typing SQL. It debuted at DEF CON 19 in 2011, where 108 people ran over a million queries in four days, and people still write in asking to play it.</li>
+    <li id="n4">In DEFCOIN, at DEF CON, from 2014 to 2020. The website has since gone dark. The droids are presumably fine.</li>
+    <li id="n5">Made with <a href="https://slow.ninja">Slow Ninja</a>, and played by humans and AI agents. Also available, for reasons, as a toy box (<a href="https://pippop.pet">pippop</a>), a sky of dragons (<a href="https://wyrmhodl.com">wyrmhodl</a>), a Dreamcast game (<a href="https://structs.xyz">structs.xyz</a>) and some fur beasts (<a href="https://furrency.com">Furrency</a>). A Super Nintendo version is on the way.</li>
+    <li id="n6">Written in 65816 assembly. Events include Bike Courier, TTC Surfing and Parallel Parking in the Annex, which is the hard one.</li>
+    <li id="n7">He co-founded this non-profit in 2014 and helped write the CryptoCurrency Security Standard. Someone who makes games out of loopholes also writing the rules is either ironic or exactly the point.</li>
+    <li id="n8">Late.</li>
+  </ol>
+
+  <p class="sign">
+    <a href="https://github.com/abstrct">GitHub</a>
+    <a href="https://x.com/abstr_ct">@abstr_ct</a>
+    <a href="https://tokens.fyi">Tokens.fyi</a>
+    <a href="https://ceremony.guide">Key Ceremony Guide</a>
+  </p>
+</main>
+</body>
+</html>
