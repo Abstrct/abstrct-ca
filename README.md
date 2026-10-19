@@ -1,6 +1,6 @@
 # abstrct.ca
 
-Josh McDougall's personal site: AS-1, The Abstrct Standard. A person, specified as an RFC.
+Josh McDougall's personal site: a 16-bit house you walk around. Look at things to find the projects. Paco follows you.
 
 ## Local
 
@@ -18,7 +18,8 @@ One-time setup in the repo: Settings → Pages → Source: **GitHub Actions**. F
 
 ## Layout
 
-- `site/index.html`: the standard (the whole home page, styles inline)
+- `site/index.html`, `house.css`, `house.js`: the house (room art is inline SVG; sprites, movement and dialog are in `house.js`)
+- `site/as-1/`: AS-1, The Abstrct Standard (the previous home page)
 - `site/scratch/`: the scratch-card version, kept as Appendix A.5
 - `site/hippo.svg`: the hippo (also the favicon)
 - `drafts/`: other drafts that lost (changelog, footnotes); not deployed

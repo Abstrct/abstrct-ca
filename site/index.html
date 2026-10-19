@@ -3,106 +3,342 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AS-1: The Abstrct Standard</title>
-  <meta name="description" content="Josh McDougall, aka Abstrct, specified as a standard. The Subject MUST put a game inside a Medium.">
-  <meta property="og:title" content="AS-1: The Abstrct Standard">
-  <meta property="og:description" content="This memo defines a person. Distribution of this memo is unlimited, which is generous, since nobody asked for it.">
-  <meta name="theme-color" content="#FBFBF8" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
+  <title>abstrct.ca</title>
+  <meta name="description" content="Josh McDougall (Abstrct). Walk around the house, look at things. Paco will follow you.">
   <link rel="icon" href="hippo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <style>
-    :root { --bg: #FBFBF8; --ink: #161616; --dim: #5F5F5A; --rule: #DADAD3; --link: #1747D1; --mark: #FFF2A8; }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #141414; --ink: #EDEDE8; --dim: #A3A39C; --rule: #333330; --link: #8EB0FF; --mark: #4A4220; }
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.65 'IBM Plex Mono', ui-monospace, monospace; }
-    main { max-width: 74ch; margin: 0 auto; padding: 48px 20px 80px; }
-    a { color: var(--link); }
-    .head { display: grid; grid-template-columns: 1fr auto; gap: 0 24px; color: var(--dim); font-size: 14px; }
-    .head span:nth-child(even) { text-align: right; }
-    h1 { font-size: 20px; font-weight: 600; text-align: center; margin: 48px 0 40px; }
-    h2 { font-size: 15px; font-weight: 600; margin: 36px 0 8px; }
-    p, ul { margin: 0 0 12px; padding-left: 3ch; }
-    ul { list-style: none; }
-    li { position: relative; }
-    li::before { content: "-"; position: absolute; left: -2ch; color: var(--dim); }
-    .kw { font-weight: 600; }
-    .dots { display: flex; gap: 1ch; }
-    .dots span:nth-child(2) { flex: 1; overflow: hidden; color: var(--rule); white-space: nowrap; }
-    .dots span:nth-child(2)::before { content: "........................................................................"; }
-    mark { background: var(--mark); color: inherit; padding: 0 2px; }
-    .foot { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--dim); font-size: 13px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    @media (max-width: 560px) { .head { grid-template-columns: 1fr; } .head span:nth-child(even) { text-align: left; margin-bottom: 6px; } }
-  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="house.css">
 </head>
 <body>
-<main>
-  <div class="head">
-    <span>Abstrct Working Group</span><span>J. McDougall</span>
-    <span>Request for Comments: 0</span><span>Abstrct</span>
-    <span>Category: Informational, mostly</span><span>October 2026</span>
-    <span>Obsoletes: abstrct.com</span><span>Errata: none acknowledged</span>
-  </div>
+  <main>
+    <header>
+      <h1>abstrct.ca</h1>
+      <p>Josh McDougall · at home</p>
+    </header>
 
-  <h1>AS-1: The Abstrct Standard</h1>
+    <div class="bezel">
+      <div class="screen" id="screen" tabindex="0" role="application" aria-label="Abstrct's house. Arrow keys to walk, Z or Enter to look at things, X to go back.">
+        <div class="stage" id="stage">
+      <svg width="576" height="480" viewBox="0 0 192 160" shape-rendering="crispEdges" aria-hidden="true" class="room">
+        <defs>
+          <pattern id="paper" width="8" height="8" patternUnits="userSpaceOnUse">
+            <rect width="8" height="8" fill="#eadbb5"/>
+            <rect width="2" height="8" fill="#dcc89a"/>
+            <rect x="5" y="3" width="1" height="1" fill="#d2bb88"/>
+          </pattern>
+          <pattern id="floor" width="32" height="16" patternUnits="userSpaceOnUse">
+            <rect width="32" height="16" fill="#c4955c"/>
+            <rect y="7" width="32" height="1" fill="#a07142"/>
+            <rect y="15" width="32" height="1" fill="#a07142"/>
+            <rect width="1" height="7" fill="#a07142"/>
+            <rect x="16" y="8" width="1" height="7" fill="#a07142"/>
+            <rect x="2" y="1" width="10" height="1" fill="#d1a46b"/>
+            <rect x="18" y="9" width="9" height="1" fill="#d1a46b"/>
+            <rect x="24" y="3" width="2" height="1" fill="#ad7d4a"/>
+            <rect x="7" y="11" width="2" height="1" fill="#ad7d4a"/>
+          </pattern>
+          <pattern id="rugdots" width="12" height="12" patternUnits="userSpaceOnUse">
+            <rect width="12" height="12" fill="#4f86a0"/>
+            <rect x="5" y="4" width="2" height="4" fill="#6fa2b8"/>
+            <rect x="4" y="5" width="4" height="2" fill="#6fa2b8"/>
+          </pattern>
+          <pattern id="fringe" width="3" height="2" patternUnits="userSpaceOnUse">
+            <rect width="1" height="2" fill="#e8e0c8"/>
+          </pattern>
+        </defs>
 
-  <h2>Status of This Memo</h2>
-  <p>This memo defines a person. Distribution of this memo is unlimited, which is generous, since nobody asked for it.</p>
+        <rect width="192" height="160" fill="url(#floor)"/>
 
-  <h2>1. Terminology</h2>
-  <p>The key words <span class="kw">MUST</span>, <span class="kw">MUST NOT</span>, <span class="kw">SHOULD</span> and <span class="kw">MAY</span> are to be interpreted as described in RFC 2119. The key word <span class="kw">GAME</span> is to be interpreted as broadly as possible, and then a bit more.</p>
+        <rect width="192" height="32" fill="url(#paper)"/>
+        <rect width="192" height="3" fill="#5b4433"/>
+        <rect y="3" width="192" height="1" fill="#7a5c44"/>
+        <rect y="23" width="192" height="9" fill="#a6764b"/>
+        <rect y="23" width="192" height="1" fill="#6b4529"/>
+        <rect y="25" width="192" height="1" fill="#c08d5d"/>
+        <rect y="31" width="192" height="1" fill="#6b4529"/>
+        <rect y="32" width="192" height="2" fill="#000000" opacity="0.14"/>
 
-  <h2>2. Definitions</h2>
-  <p><span class="kw">Subject:</span> Josh McDougall, also known as Abstrct. No vowel was harmed in the making of this handle. It simply wasn’t invited.</p>
-  <p><span class="kw">Medium:</span> any system that was not designed to contain a game.</p>
+        <rect x="34" y="34" width="28" height="16" fill="#ffffff" opacity="0.12"/>
+        <rect x="30" y="3" width="36" height="2" fill="#6b4529"/>
+        <rect x="34" y="5" width="28" height="18" fill="#f3efe2"/>
+        <rect x="36" y="7" width="24" height="14" fill="#8fd0f2"/>
+        <rect x="36" y="17" width="24" height="4" fill="#7cc06a"/>
+        <rect x="36" y="16" width="5" height="1" fill="#7cc06a"/>
+        <rect x="52" y="15" width="6" height="2" fill="#7cc06a"/>
+        <rect x="39" y="9" width="5" height="1" fill="#ffffff"/>
+        <rect x="38" y="10" width="8" height="2" fill="#ffffff"/>
+        <rect x="47" y="7" width="2" height="14" fill="#f3efe2"/>
+        <rect x="36" y="13" width="24" height="1" fill="#f3efe2"/>
+        <rect x="34" y="23" width="28" height="2" fill="#d8d1bd"/>
+        <rect x="31" y="4" width="5" height="21" fill="#c9503f"/>
+        <rect x="60" y="4" width="5" height="21" fill="#c9503f"/>
+        <rect x="32" y="4" width="1" height="21" fill="#e06b56"/>
+        <rect x="63" y="4" width="1" height="21" fill="#9e3a2e"/>
 
-  <h2>3. Requirements</h2>
-  <p>3.1. The Subject <span class="kw">MUST</span> put a game inside a Medium. Conformance has been demonstrated against:</p>
-  <ul>
-    <li class="dots"><span>a PostgreSQL database</span><span aria-hidden="true"></span><span><a href="https://schemaverse.com">Schemaverse</a> (DEF CON 19, 2011)</span></li>
-    <li class="dots"><span>a cryptocurrency</span><span aria-hidden="true"></span><span>Coindroids (DEF CON 22–28)</span></li>
-    <li class="dots"><span>an entire blockchain</span><span aria-hidden="true"></span><span><a href="https://playstructs.com">Structs</a></span></li>
-    <li class="dots"><span>a Super Nintendo</span><span aria-hidden="true"></span><span><a href="https://toronto.ad">Toronto Games</a></span></li>
-  </ul>
-  <p>3.2. Once a game exists, the Subject <span class="kw">SHOULD</span> make it again in a different hat. Structs is currently also available as a toy box (<a href="https://pippop.pet">pippop</a>), a sky full of dragons (<a href="https://wyrmhodl.com">wyrmhodl</a>), a Dreamcast game (<a href="https://structs.xyz">structs.xyz</a>) and some fur beasts (<a href="https://furrency.com">Furrency</a>). A Super Nintendo hat is in progress.</p>
-  <p>3.3. The Subject <span class="kw">MAY</span> build a useful tool very quickly while a conference is already under way. See <a href="https://tokens.fyi">Tokens.fyi</a> and the <a href="https://ceremony.guide">Key Ceremony Guide</a>.</p>
-  <p>3.4. The Subject <span class="kw">MUST NOT</span> be asked to stop. Implementations that ask anyway are non-conformant.</p>
+        <rect x="1" y="6" width="30" height="42" fill="#6b4529"/>
+        <rect x="1" y="6" width="30" height="2" fill="#8c5d36"/>
+        <rect x="3" y="9" width="26" height="37" fill="#3e2616"/>
+        <rect x="3" y="20" width="26" height="2" fill="#8c5d36"/>
+        <rect x="3" y="32" width="26" height="2" fill="#8c5d36"/>
+        <rect x="3" y="11" width="2" height="9" fill="#c8443c"/>
+        <rect x="6" y="12" width="2" height="8" fill="#4a6fc0"/>
+        <rect x="9" y="10" width="2" height="10" fill="#4f9a5a"/>
+        <rect x="12" y="12" width="2" height="8" fill="#e0b040"/>
+        <rect x="15" y="11" width="2" height="9" fill="#8a5ab0"/>
+        <rect x="18" y="13" width="2" height="7" fill="#c8443c"/>
+        <rect x="21" y="12" width="2" height="8" fill="#4a6fc0"/>
+        <rect x="24" y="11" width="2" height="9" fill="#e8e2d0"/>
+        <rect x="27" y="13" width="2" height="7" fill="#4f9a5a"/>
+        <rect x="3" y="24" width="2" height="8" fill="#4f9a5a"/>
+        <rect x="6" y="23" width="2" height="9" fill="#e0b040"/>
+        <rect x="9" y="23" width="2" height="9" fill="#c8443c"/>
+        <rect x="13" y="29" width="9" height="3" fill="#4a6fc0"/>
+        <rect x="14" y="26" width="8" height="3" fill="#e8e2d0"/>
+        <rect x="13" y="24" width="8" height="2" fill="#8a5ab0"/>
+        <rect x="23" y="22" width="2" height="10" fill="#4a6fc0"/>
+        <rect x="26" y="24" width="2" height="8" fill="#8a5ab0"/>
+        <rect x="3" y="35" width="2" height="11" fill="#4a6fc0"/>
+        <rect x="6" y="36" width="2" height="10" fill="#c8443c"/>
+        <rect x="9" y="36" width="2" height="10" fill="#4f9a5a"/>
+        <rect x="12" y="37" width="2" height="9" fill="#e0b040"/>
+        <rect x="15" y="36" width="2" height="10" fill="#e8e2d0"/>
+        <rect x="18" y="35" width="2" height="11" fill="#8a5ab0"/>
+        <rect x="21" y="37" width="2" height="9" fill="#c8443c"/>
+        <rect x="24" y="36" width="2" height="10" fill="#4a6fc0"/>
+        <rect x="27" y="36" width="2" height="10" fill="#4f9a5a"/>
+        <rect x="1" y="48" width="30" height="2" fill="#000000" opacity="0.15"/>
 
-  <h2>4. Security Considerations</h2>
-  <p>The Subject co-founded <a href="https://cryptoconsortium.org">C4</a> and helped write the CryptoCurrency Security Standard, which is a real standard. <mark>This one is not.</mark></p>
-  <p>Schemaverse was built so people could try to break into it. They did. That was the point.</p>
+        <rect x="70" y="12" width="20" height="16" fill="#d9d2bf"/>
+        <rect x="70" y="12" width="20" height="1" fill="#efe9d8"/>
+        <rect x="72" y="14" width="16" height="11" fill="#1f2a24"/>
+        <rect x="73" y="15" width="8" height="1" fill="#6fe08a"/>
+        <rect x="73" y="17" width="12" height="1" fill="#6fe08a"/>
+        <rect x="73" y="19" width="6" height="1" fill="#6fe08a"/>
+        <rect x="73" y="21" width="10" height="1" fill="#3fa65a"/>
+        <rect x="73" y="23" width="2" height="1" fill="#b8ffc8"/>
+        <rect x="87" y="26" width="1" height="1" fill="#6fe08a"/>
+        <rect x="77" y="28" width="6" height="2" fill="#bdb5a0"/>
+        <rect x="66" y="27" width="3" height="4" fill="#e8663d"/>
+        <rect x="64" y="30" width="32" height="5" fill="#9a6a40"/>
+        <rect x="64" y="30" width="32" height="1" fill="#c08d5d"/>
+        <rect x="70" y="31" width="14" height="2" fill="#cfc7b2"/>
+        <rect x="88" y="31" width="2" height="2" fill="#cfc7b2"/>
+        <rect x="64" y="35" width="32" height="1" fill="#6b4529"/>
+        <rect x="66" y="36" width="10" height="11" fill="#8a5c36"/>
+        <rect x="68" y="39" width="6" height="1" fill="#5a3a20"/>
+        <rect x="68" y="43" width="6" height="1" fill="#5a3a20"/>
+        <rect x="92" y="36" width="3" height="11" fill="#7a4f2d"/>
+        <rect x="64" y="47" width="32" height="2" fill="#000000" opacity="0.15"/>
 
-  <h2>5. Interoperability</h2>
-  <p>The Subject also DJs. Sets are available over <a href="https://soundcloud.com/abstrct">SoundCloud</a>. No conformance testing has been carried out on the dance floor.</p>
+        <rect x="98" y="6" width="12" height="16" fill="#1d1b2e"/>
+        <rect x="98" y="6" width="12" height="1" fill="#3a3658"/>
+        <rect x="102" y="9" width="4" height="1" fill="#f0b43c"/>
+        <rect x="101" y="10" width="6" height="4" fill="#f0b43c"/>
+        <rect x="102" y="14" width="4" height="1" fill="#f0b43c"/>
+        <rect x="103" y="11" width="2" height="2" fill="#1d1b2e"/>
+        <rect x="100" y="17" width="8" height="1" fill="#e9e4d8"/>
+        <rect x="101" y="19" width="6" height="1" fill="#8a85b0"/>
+        <rect x="103" y="5" width="2" height="2" fill="#c8383c"/>
 
-  <h2>6. IANA Considerations</h2>
-  <p>None. IANA has not been told.</p>
+        <rect x="119" y="10" width="2" height="36" fill="#6b4529"/>
+        <rect x="119" y="10" width="1" height="36" fill="#8c5d36"/>
+        <rect x="114" y="45" width="12" height="2" fill="#5a3a20"/>
+        <rect x="114" y="12" width="12" height="1" fill="#6b4529"/>
+        <rect x="114" y="26" width="12" height="1" fill="#6b4529"/>
+        <rect x="117" y="4" width="6" height="5" fill="#2a2333"/>
+        <rect x="115" y="9" width="10" height="1" fill="#2a2333"/>
+        <rect x="117" y="7" width="6" height="1" fill="#c8383c"/>
+        <rect x="112" y="13" width="6" height="3" fill="#c8383c"/>
+        <rect x="111" y="16" width="8" height="1" fill="#9e2a2e"/>
+        <rect x="122" y="13" width="6" height="4" fill="#2f8f9d"/>
+        <rect x="124" y="12" width="2" height="1" fill="#e8e2d0"/>
+        <rect x="113" y="25" width="5" height="3" fill="#e8c860"/>
+        <rect x="111" y="28" width="9" height="1" fill="#c9a23e"/>
+        <rect x="121" y="27" width="6" height="5" fill="#5aa05a"/>
+        <rect x="122" y="26" width="1" height="1" fill="#5aa05a"/>
+        <rect x="126" y="26" width="1" height="1" fill="#5aa05a"/>
+        <rect x="122" y="29" width="1" height="1" fill="#2a2333"/>
+        <rect x="113" y="47" width="14" height="2" fill="#000000" opacity="0.15"/>
 
-  <h2>7. References</h2>
-  <ul>
-    <li>[STUDIO] <a href="https://slow.ninja">slow.ninja</a></li>
-    <li>[CODE] <a href="https://github.com/abstrct">github.com/abstrct</a></li>
-    <li>[CHATTER] <a href="https://x.com/abstr_ct">x.com/abstr_ct</a></li>
-  </ul>
+        <rect x="141" y="8" width="1" height="4" fill="#57535f"/>
+        <rect x="140" y="6" width="1" height="2" fill="#57535f"/>
+        <rect x="146" y="8" width="1" height="4" fill="#57535f"/>
+        <rect x="147" y="6" width="1" height="2" fill="#57535f"/>
+        <rect x="131" y="12" width="26" height="22" fill="#3a3740"/>
+        <rect x="131" y="12" width="26" height="1" fill="#57535f"/>
+        <rect x="133" y="14" width="18" height="16" fill="#2a3a5a"/>
+        <rect x="133" y="25" width="18" height="5" fill="#4f9a5a"/>
+        <rect x="135" y="16" width="5" height="2" fill="#a8c8f0"/>
+        <rect x="141" y="20" width="4" height="5" fill="#e8663d"/>
+        <rect x="141" y="19" width="4" height="2" fill="#2f8f9d"/>
+        <rect x="152" y="15" width="3" height="1" fill="#57535f"/>
+        <rect x="152" y="17" width="3" height="1" fill="#57535f"/>
+        <rect x="152" y="19" width="3" height="1" fill="#57535f"/>
+        <rect x="152" y="21" width="3" height="1" fill="#57535f"/>
+        <rect x="152" y="25" width="3" height="2" fill="#8a8590"/>
+        <rect x="129" y="34" width="30" height="13" fill="#7a4f2d"/>
+        <rect x="129" y="34" width="30" height="1" fill="#a6764b"/>
+        <rect x="131" y="37" width="26" height="8" fill="#4a2e18"/>
+        <rect x="133" y="40" width="12" height="5" fill="#cfcbd6"/>
+        <rect x="133" y="40" width="12" height="1" fill="#e6e3ec"/>
+        <rect x="135" y="42" width="7" height="1" fill="#8d86a3"/>
+        <rect x="143" y="42" width="1" height="1" fill="#5b4f9a"/>
+        <rect x="148" y="41" width="7" height="4" fill="#7d7a86"/>
+        <rect x="149" y="42" width="5" height="1" fill="#c8383c"/>
+        <rect x="129" y="47" width="30" height="2" fill="#000000" opacity="0.15"/>
 
-  <h2>Appendix A. Rejected Drafts</h2>
-  <p>Earlier drafts of this document were withdrawn for being too much. They are listed here for the record.</p>
-  <ul>
-    <li>A.1. A text adventure. Too many rooms.</li>
-    <li>A.2. A vending machine. Exact change only, which nobody had.</li>
-    <li>A.3. A tarot deck. Predicted this outcome.</li>
-    <li>A.4. A hippo. Retained as a mascot.</li>
-    <li>A.5. A scratch card. <a href="scratch/">Still available</a>, for completeness.</li>
-  </ul>
+        <rect x="160" y="4" width="32" height="44" fill="#5a3a20"/>
+        <rect x="162" y="4" width="28" height="44" fill="#8c5d36"/>
+        <rect x="162" y="4" width="28" height="4" fill="#2a1d14"/>
+        <rect x="162" y="8" width="28" height="2" fill="#c99a62"/>
+        <rect x="162" y="13" width="28" height="1" fill="#6b4529"/>
+        <rect x="162" y="14" width="28" height="2" fill="#c99a62"/>
+        <rect x="162" y="19" width="28" height="1" fill="#6b4529"/>
+        <rect x="162" y="20" width="28" height="2" fill="#c99a62"/>
+        <rect x="162" y="25" width="28" height="1" fill="#6b4529"/>
+        <rect x="162" y="26" width="28" height="2" fill="#c99a62"/>
+        <rect x="162" y="31" width="28" height="1" fill="#6b4529"/>
+        <rect x="162" y="32" width="28" height="2" fill="#c99a62"/>
+        <rect x="162" y="37" width="28" height="1" fill="#6b4529"/>
+        <rect x="162" y="38" width="28" height="2" fill="#c99a62"/>
+        <rect x="162" y="43" width="28" height="1" fill="#6b4529"/>
+        <rect x="162" y="44" width="28" height="2" fill="#c99a62"/>
+        <rect x="160" y="48" width="32" height="2" fill="#000000" opacity="0.15"/>
 
-  <h2>Author’s Address</h2>
-  <p>You are standing in it.</p>
+        <rect x="50" y="64" width="92" height="2" fill="url(#fringe)"/>
+        <rect x="50" y="126" width="92" height="2" fill="url(#fringe)"/>
+        <rect x="50" y="66" width="92" height="60" fill="#2f5a73"/>
+        <rect x="53" y="69" width="86" height="54" fill="#e2cf9c"/>
+        <rect x="54" y="70" width="84" height="52" fill="#4f86a0"/>
+        <rect x="58" y="74" width="76" height="44" fill="url(#rugdots)"/>
 
-  <div class="foot"><span>McDougall · Informational</span><span>[Page 1 of 1]</span></div>
-</main>
+        <rect x="80" y="80" width="32" height="9" fill="#4a3a52"/>
+        <rect x="80" y="80" width="32" height="1" fill="#6e5c78"/>
+        <rect x="80" y="89" width="32" height="3" fill="#33283a"/>
+        <rect x="81" y="92" width="2" height="4" fill="#33283a"/>
+        <rect x="109" y="92" width="2" height="4" fill="#33283a"/>
+        <rect x="82" y="81" width="12" height="7" fill="#cfcbd6"/>
+        <rect x="84" y="82" width="7" height="5" fill="#1a1620"/>
+        <rect x="83" y="83" width="9" height="3" fill="#1a1620"/>
+        <rect x="87" y="84" width="2" height="1" fill="#c8383c"/>
+        <rect x="92" y="82" width="1" height="4" fill="#8a8590"/>
+        <rect x="94" y="82" width="4" height="6" fill="#57535f"/>
+        <rect x="95" y="83" width="1" height="1" fill="#6fe08a"/>
+        <rect x="96" y="85" width="1" height="1" fill="#c8383c"/>
+        <rect x="98" y="81" width="12" height="7" fill="#cfcbd6"/>
+        <rect x="100" y="82" width="7" height="5" fill="#1a1620"/>
+        <rect x="99" y="83" width="9" height="3" fill="#1a1620"/>
+        <rect x="102" y="84" width="2" height="1" fill="#f0b43c"/>
+        <rect x="108" y="82" width="1" height="4" fill="#8a8590"/>
+        <rect x="80" y="96" width="32" height="2" fill="#000000" opacity="0.15"/>
+
+        <rect x="17" y="100" width="14" height="10" fill="#9e3a2e"/>
+        <rect x="16" y="102" width="16" height="6" fill="#9e3a2e"/>
+        <rect x="19" y="102" width="10" height="6" fill="#e0a07a"/>
+        <rect x="18" y="103" width="12" height="4" fill="#e0a07a"/>
+        <rect x="21" y="104" width="5" height="1" fill="#f4f4ee"/>
+        <rect x="20" y="103" width="1" height="1" fill="#f4f4ee"/>
+        <rect x="20" y="105" width="1" height="1" fill="#f4f4ee"/>
+        <rect x="26" y="103" width="1" height="1" fill="#f4f4ee"/>
+        <rect x="26" y="105" width="1" height="1" fill="#f4f4ee"/>
+        <rect x="17" y="110" width="14" height="2" fill="#000000" opacity="0.15"/>
+
+        <rect x="165" y="94" width="6" height="2" fill="#8a8590"/>
+        <rect x="164" y="96" width="8" height="8" fill="#bfe0ea"/>
+        <rect x="165" y="100" width="6" height="4" fill="#f0b43c"/>
+        <rect x="166" y="99" width="3" height="1" fill="#f0b43c"/>
+        <rect x="167" y="101" width="1" height="1" fill="#c9902a"/>
+        <rect x="165" y="97" width="1" height="3" fill="#ffffff"/>
+        <rect x="161" y="104" width="14" height="4" fill="#8c5d36"/>
+        <rect x="161" y="104" width="14" height="1" fill="#c08d5d"/>
+        <rect x="162" y="108" width="2" height="4" fill="#6b4529"/>
+        <rect x="172" y="108" width="2" height="4" fill="#6b4529"/>
+        <rect x="161" y="112" width="14" height="2" fill="#000000" opacity="0.15"/>
+
+        <rect x="6" y="140" width="4" height="11" fill="#3f8a4a"/>
+        <rect x="3" y="143" width="4" height="6" fill="#5aa05a"/>
+        <rect x="9" y="142" width="4" height="7" fill="#5aa05a"/>
+        <rect x="5" y="138" width="2" height="3" fill="#6fbf6a"/>
+        <rect x="10" y="140" width="2" height="2" fill="#6fbf6a"/>
+        <rect x="3" y="151" width="10" height="2" fill="#d97a4c"/>
+        <rect x="4" y="153" width="8" height="6" fill="#c0663d"/>
+        <rect x="182" y="140" width="4" height="11" fill="#3f8a4a"/>
+        <rect x="179" y="143" width="4" height="6" fill="#5aa05a"/>
+        <rect x="185" y="142" width="4" height="7" fill="#5aa05a"/>
+        <rect x="181" y="138" width="2" height="3" fill="#6fbf6a"/>
+        <rect x="186" y="140" width="2" height="2" fill="#6fbf6a"/>
+        <rect x="179" y="151" width="10" height="2" fill="#d97a4c"/>
+        <rect x="180" y="153" width="8" height="6" fill="#c0663d"/>
+
+        <rect x="82" y="147" width="28" height="11" fill="#9e3a2e"/>
+        <rect x="84" y="149" width="24" height="7" fill="#c8503f"/>
+        <rect x="84" y="152" width="24" height="1" fill="#e8a080"/>
+        <rect y="159" width="80" height="1" fill="#5b4433"/>
+        <rect x="112" y="159" width="80" height="1" fill="#5b4433"/>
+      </svg>
+          <div class="actor" id="dog"><div class="shade"></div><div class="px"></div></div>
+          <div class="actor" id="me"><div class="shade"></div><div class="px"></div></div>
+          <div class="emote" id="heart" hidden><div class="px"></div></div>
+
+          <div class="box menu" id="menu" hidden></div>
+          <div class="box dialog" id="dialog" role="status" aria-live="polite" hidden>
+            <p id="dialog-text"></p>
+            <svg class="next" id="next" width="18" height="12" viewBox="0 0 6 4" shape-rendering="crispEdges" aria-hidden="true"><path d="M0 0h6v1h-1v1h-1v1h-2v-1h-1v-1h-1z" fill="#d0403a"/></svg>
+          </div>
+
+          <button type="button" class="start" id="start">
+            <span class="title">ABSTRCT'S HOUSE</span>
+            <span class="blink">PRESS START</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="dpad">
+        <span></span>
+        <button type="button" class="pad up" data-dir="up" aria-label="Walk up"><svg width="18" height="12" viewBox="0 0 6 4" shape-rendering="crispEdges" aria-hidden="true"><path d="M2 0h2v1h1v1h1v2h-6v-2h1v-1h1z"/></svg></button>
+        <span></span>
+        <button type="button" class="pad left" data-dir="left" aria-label="Walk left"><svg width="12" height="18" viewBox="0 0 4 6" shape-rendering="crispEdges" aria-hidden="true"><path d="M0 2h1v-1h1v-1h2v6h-2v-1h-1v-1h-1z"/></svg></button>
+        <span class="hub"></span>
+        <button type="button" class="pad right" data-dir="right" aria-label="Walk right"><svg width="12" height="18" viewBox="0 0 4 6" shape-rendering="crispEdges" aria-hidden="true"><path d="M0 0h2v1h1v1h1v2h-1v1h-1v1h-2z"/></svg></button>
+        <span></span>
+        <button type="button" class="pad down" data-dir="down" aria-label="Walk down"><svg width="18" height="12" viewBox="0 0 6 4" shape-rendering="crispEdges" aria-hidden="true"><path d="M0 0h6v2h-1v1h-1v1h-2v-1h-1v-1h-1z"/></svg></button>
+        <span></span>
+      </div>
+
+      <div class="hint">
+        <div><b>Arrows / WASD</b> walk</div>
+        <div><b>Z / Enter</b> look · <b>X</b> back</div>
+      </div>
+
+      <div class="ab">
+        <button type="button" class="btn b" id="btn-b" aria-label="B, back">B</button>
+        <button type="button" class="btn a" id="btn-a" aria-label="A, look">A</button>
+      </div>
+    </div>
+
+    <nav class="sr-only" aria-label="Links">
+      <ul>
+        <li><a href="https://schemaverse.com">Schemaverse</a></li>
+        <li><a href="https://playstructs.com">Structs</a></li>
+        <li><a href="https://pippop.pet">pippop</a></li>
+        <li><a href="https://wyrmhodl.com">wyrmhodl</a></li>
+        <li><a href="https://structs.xyz">structs.xyz</a></li>
+        <li><a href="https://furrency.com">Furrency</a></li>
+        <li><a href="https://toronto.ad">Toronto Games</a></li>
+        <li><a href="https://tokens.fyi">Tokens.fyi</a></li>
+        <li><a href="https://ceremony.guide">Key Ceremony Guide</a></li>
+        <li><a href="https://cryptoconsortium.org">CryptoCurrency Security Standard</a></li>
+        <li><a href="https://soundcloud.com/abstrct">SoundCloud</a></li>
+        <li><a href="https://slow.ninja">slow.ninja</a></li>
+        <li><a href="https://github.com/abstrct">GitHub</a></li>
+        <li><a href="https://x.com/abstr_ct">X</a></li>
+      </ul>
+    </nav>
+  </main>
+  <script src="house.js"></script>
 </body>
 </html>
