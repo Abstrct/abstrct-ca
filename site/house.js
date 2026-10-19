@@ -86,7 +86,7 @@
   const $ = (id) => document.getElementById(id);
   const screen = $('screen'), stage = $('stage');
   const meEl = $('me'), dogEl = $('dog'), heartEl = $('heart');
-  const dialogEl = $('dialog'), textEl = $('dialog-text'), nextEl = $('next'), menuEl = $('menu'), startEl = $('start');
+  const dialogEl = $('dialog'), textEl = $('dialog-text'), nextEl = $('next'), menuEl = $('menu');
   const CURSOR = '<svg width="12" height="18" viewBox="0 0 4 6" shape-rendering="crispEdges" aria-hidden="true"><path d="M0 0h1v1h1v1h1v1h1v1h-1v1h-1v1h-1v1h-1z" fill="#3a3a44"/></svg>';
   heartEl.firstElementChild.style.boxShadow = SPR.heart;
 
@@ -95,7 +95,7 @@
   fit();
 
   // State
-  const s = { started: false, px: 5, py: 7, facing: 'down', dogX: 4, dogY: 7, dogFacing: 'right', step: 0, walking: false, dialog: null };
+  const s = { px: 5, py: 7, facing: 'down', dogX: 4, dogY: 7, dogFacing: 'right', step: 0, walking: false, dialog: null };
   let held = null, lastMove = 0, menuKey = '';
 
   const blocked = (x, y) => x < 0 || y < 0 || x >= COLS || y >= ROWS || y <= 1 || BLOCKED.has(x + ',' + y);
@@ -120,7 +120,6 @@
     heartEl.hidden = !(d && d.id === 'paco');
     if (!heartEl.hidden) { heartEl.style.left = (s.dogX * TILE + 13) + 'px'; heartEl.style.top = (s.dogY * TILE - 28) + 'px'; }
     dialogEl.hidden = !d;
-    startEl.hidden = s.started;
     const open = d && menuUp(d);
     menuEl.hidden = !open;
     if (d) {
@@ -202,15 +201,7 @@
     render();
   }
 
-  function begin() {
-    if (s.started) return;
-    s.started = true;
-    screen.focus({ preventScroll: true });
-    open('intro');
-  }
-
   function pressA() {
-    if (!s.started) { begin(); return; }
     const d = s.dialog;
     if (d) {
       const thing = THINGS[d.id];
@@ -235,7 +226,6 @@
   }
 
   function push(dir, repeat) {
-    if (!s.started) return;
     if (s.dialog) { if (!repeat) nav(dir); return; }
     if (held === dir) return;
     held = dir;
@@ -265,7 +255,6 @@
   window.addEventListener('keyup', (e) => { if (KEYS[e.key] && held === KEYS[e.key]) held = null; });
   window.addEventListener('blur', () => { held = null; });
 
-  startEl.addEventListener('click', begin);
   $('btn-a').addEventListener('click', pressA);
   $('btn-b').addEventListener('click', pressB);
   document.querySelectorAll('.pad').forEach((pad) => {
@@ -275,7 +264,6 @@
       e.preventDefault();
       pad.setPointerCapture(e.pointerId);
       pad.classList.add('held');
-      if (!s.started) { begin(); return; }
       push(dir);
     });
     pad.addEventListener('pointerup', release);
@@ -284,6 +272,6 @@
     pad.addEventListener('click', (e) => { if (e.detail === 0) { held = null; push(dir); held = null; } });
   });
 
-  render();
+  open('intro');
   requestAnimationFrame(() => requestAnimationFrame(() => stage.classList.add('live')));
 })();
