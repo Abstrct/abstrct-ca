@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Games Inside Things (Easy, Weeknight)</title>
+  <link rel="icon" href="/hippo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #FBF6EE; --ink: #2A2420; --dim: #74695E; --accent: #C8522B; --card: #FFFFFF; --rule: #E6DCCD; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.65 'Work Sans', system-ui, sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 20px 96px; }
+    a { color: var(--accent); }
+    h1 { font: 700 clamp(34px, 6vw, 54px)/1.05 'Fraunces', Georgia, serif; margin: 0 0 12px; letter-spacing: -0.01em; }
+    .by { color: var(--dim); margin: 0 0 20px; }
+    .jump { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; padding: 10px 18px; border-radius: 999px; margin-bottom: 28px; }
+    .story p { margin: 0 0 18px; }
+    .story .muted { color: var(--dim); font-style: italic; }
+    .card { background: var(--card); border: 1px solid var(--rule); border-radius: 18px; padding: 28px; margin-top: 40px; scroll-margin-top: 24px; }
+    .card h2 { font: 700 30px/1.1 'Fraunces', Georgia, serif; margin: 0 0 14px; }
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 0 0 22px; padding: 14px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .facts small { display: block; text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; color: var(--dim); }
+    .facts b { font-size: 15px; }
+    h3 { font: 700 20px 'Fraunces', Georgia, serif; margin: 22px 0 8px; }
+    ul, ol { margin: 0; padding-left: 22px; }
+    li { margin: 6px 0; }
+    .note { margin-top: 22px; background: var(--bg); border-radius: 12px; padding: 14px 16px; font-size: 15px; }
+    @media (max-width: 520px) { .facts { grid-template-columns: 1fr; } .card { padding: 20px; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Games Inside Things (Easy, Weeknight)</h1>
+  <p class="by">By Josh McDougall, aka Abstrct · 16 years in the making</p>
+  <a class="jump" href="#recipe">Jump to recipe</a>
+
+  <div class="story">
+    <p>Before we get to the recipe, a little about me.</p>
+    <p>I first made this dish in 2011, in a PostgreSQL database, for 108 people at DEF CON. They ran over a million queries in four days. Some of them still write in asking when I’ll make it again.</p>
+    <p>Since then I’ve made it with a cryptocurrency, an entire blockchain and a Super Nintendo. I’ve made it at conferences that had already started. I co-founded a non-profit and helped write a security standard, which is sort of like reading the label on the jar for once.</p>
+    <p>Every autumn, when the leaves turn and the block times shorten, I think about my grandmother’s</p>
+    <p class="muted">No. Fine. You’re right. Here’s the recipe.</p>
+  </div>
+
+  <article class="card" id="recipe">
+    <h2>Games Inside Things</h2>
+    <div class="facts">
+      <div><small>Prep</small><b>One conference</b></div>
+      <div><small>Cook</small><b>Since 2010</b></div>
+      <div><small>Serves</small><b>108 (DEF CON 19)</b></div>
+    </div>
+
+    <h3>Ingredients</h3>
+    <ul>
+      <li>1 PostgreSQL database, room temperature</li>
+      <li>A generous pinch of PL/pgSQL</li>
+      <li>DEFCOIN, to taste</li>
+      <li>1 blockchain, built on the Cosmos SDK, with Alpha Matter</li>
+      <li>1 Super Nintendo, plus 512 KB of 65816 assembly</li>
+      <li>1 studio (<a href="https://slow.ninja">Slow Ninja</a>)</li>
+      <li>Strangers, to serve</li>
+    </ul>
+
+    <h3>Method</h3>
+    <ol>
+      <li>Take the database. Put a space war in it. Invite DEF CON to attack it. Serve as <a href="https://schemaverse.com">Schemaverse</a>.</li>
+      <li>Replace the database with a cryptocurrency. Teach robots to shoot money at each other. Serve as Coindroids, at DEF CON 22 through 28.</li>
+      <li>Scale up to a whole blockchain. Allow AI agents at the table. Serve as <a href="https://playstructs.com">Structs</a>.</li>
+      <li>Plate the same dish four more ways: <a href="https://pippop.pet">pippop</a>, <a href="https://wyrmhodl.com">wyrmhodl</a>, <a href="https://structs.xyz">structs.xyz</a>, <a href="https://furrency.com">Furrency</a>.</li>
+      <li>Cool slightly. Pour into a Super Nintendo. Garnish with TTC Surfing. Serve as <a href="https://toronto.ad">Toronto Games</a>.</li>
+      <li>If a conference has already started, make something useful in a hurry (<a href="https://tokens.fyi">Tokens.fyi</a>, <a href="https://ceremony.guide">Key Ceremony Guide</a>).</li>
+    </ol>
+
+    <div class="note"><b>Chef’s notes.</b> Pairs well with a <a href="https://soundcloud.com/abstrct">DJ set</a>. If you don’t have a database, a blockchain works. If you don’t have a blockchain, honestly, most things work. For food safety, see <a href="https://cryptoconsortium.org">C4</a>. More recipes at <a href="https://github.com/abstrct">github.com/abstrct</a> and <a href="https://x.com/abstr_ct">@abstr_ct</a>.</div>
+  </article>
+</main>
+</body>
+</html>

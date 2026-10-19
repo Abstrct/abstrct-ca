@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EXPLAIN ANALYZE abstrct</title>
+  <link rel="icon" href="/hippo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #FFFFFF; --ink: #1B1B1B; --dim: #7A7A75; --prompt: #2F5BFF; --note: #A0522D; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #111214; --ink: #E3E3DE; --dim: #8B8B86; --prompt: #8EA8FF; --note: #E5A06B; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.6 'JetBrains Mono', ui-monospace, monospace; }
+    main { max-width: 96ch; margin: 0 auto; padding: 48px 20px 80px; overflow-x: auto; }
+    pre { margin: 0; font: inherit; white-space: pre; }
+    a { color: inherit; text-decoration: underline; text-decoration-color: var(--prompt); text-underline-offset: 3px; }
+    a:hover { color: var(--prompt); }
+    .p { color: var(--prompt); }
+    .d { color: var(--dim); }
+    .n { color: var(--note); }
+    b { font-weight: 700; }
+    .cursor { display: inline-block; width: 0.6em; height: 1.1em; background: var(--ink); vertical-align: -0.2em; animation: blink 1.1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+</head>
+<body>
+<main>
+<pre><span class="p">abstrct=#</span> <b>EXPLAIN ANALYZE SELECT * FROM josh WHERE medium IS NOT a_game;</b>
+<span class="d">                                         QUERY PLAN
+--------------------------------------------------------------------------------------------</span>
+ Append  (cost=0.00..∞ rows=4 width=lots) (actual time=2010..2026 rows=4 loops=∞)
+   ->  Seq Scan on databases  (actual rows=1)
+         Filter: (engine = 'postgresql')
+         Output: <a href="https://schemaverse.com">Schemaverse</a>          <span class="n">-- DEF CON 19, 2011. 108 players, 1,000,000+ queries, 4 days</span>
+   ->  Index Scan using defcoin_idx on cryptocurrencies  (actual rows=1)
+         Output: Coindroids           <span class="n">-- robots shooting money. DEF CON 22..28</span>
+         Buffers: 56% of all DEFCOIN transactions (DEF CON 26)
+   ->  Hash Join  (actual rows=1)
+         Hash Cond: (blockchain.studio = <a href="https://slow.ninja">slow_ninja</a>)
+         Output: <a href="https://playstructs.com">Structs</a>              <span class="n">-- its own chain. players include AI agents</span>
+         ->  Materialize  (reskins)
+               ->  <a href="https://pippop.pet">pippop</a>, <a href="https://wyrmhodl.com">wyrmhodl</a>, <a href="https://structs.xyz">structs.xyz</a>, <a href="https://furrency.com">furrency</a>
+   ->  Function Scan on snes_65816  (actual rows=1)
+         Output: <a href="https://toronto.ad">Toronto Games</a>        <span class="n">-- 512 KB. includes TTC Surfing</span>
+   SubPlan 1  (rarely executed)
+     ->  Result: <a href="https://cryptoconsortium.org">C4</a>, CCSS          <span class="n">-- writes the rules, sometimes</span>
+   SubPlan 2  (executed under conference pressure)
+     ->  Result: <a href="https://tokens.fyi">tokens.fyi</a>, <a href="https://ceremony.guide">ceremony.guide</a>
+ Planning Time: 0.000 ms          <span class="n">-- did not plan</span>
+ JIT: no
+ Execution Time: 16 years and counting
+<span class="d">(24 rows)</span>
+
+<span class="p">abstrct=#</span> <b>SELECT url FROM elsewhere;</b>
+<span class="d">            url
+---------------------------</span>
+ <a href="https://soundcloud.com/abstrct">soundcloud.com/abstrct</a>
+ <a href="https://github.com/abstrct">github.com/abstrct</a>
+ <a href="https://x.com/abstr_ct">x.com/abstr_ct</a>
+<span class="d">(3 rows)</span>
+
+<span class="p">abstrct=#</span> <span class="cursor" aria-hidden="true"></span></pre>
+</main>
+</body>
+</html>

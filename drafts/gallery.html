@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abstrct: Games Inside Things</title>
+  <link rel="icon" href="/hippo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --wall: #F3F1EC; --ink: #1A1A1A; --dim: #5C5A55; --card: #FFFFFF; --shadow: rgba(0,0,0,.08); }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--wall); color: var(--ink); font: 15px/1.5 'Inter Tight', system-ui, sans-serif; }
+    main { max-width: 1180px; margin: 0 auto; padding: 72px 24px 96px; }
+    .title { margin: 0 0 8px; font-size: clamp(40px, 7vw, 92px); font-weight: 800; letter-spacing: -0.04em; line-height: 0.95; }
+    .sub { margin: 0 0 72px; font-size: 18px; color: var(--dim); max-width: 560px; }
+    .wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 56px 40px; align-items: start; }
+    .label { background: var(--card); padding: 22px 24px 20px; box-shadow: 0 1px 0 var(--shadow), 0 10px 24px var(--shadow); max-width: 380px; }
+    .artist { margin: 0; font-weight: 600; }
+    .artist span { font-weight: 400; color: var(--dim); }
+    .work { margin: 10px 0 0; font-style: italic; font-size: 19px; }
+    .work a { color: inherit; }
+    .medium, .credit { margin: 2px 0 0; color: var(--dim); font-size: 14px; }
+    .text { margin: 14px 0 0; font-size: 14px; }
+    .no { float: right; font-size: 12px; color: var(--dim); }
+    .exit { margin-top: 80px; padding-top: 18px; border-top: 1px solid #DDD9D0; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 14px; }
+    .exit strong { text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px; margin-right: 6px; }
+    .exit a { color: var(--ink); }
+  </style>
+</head>
+<body>
+<main>
+  <h1 class="title">Abstrct: Games Inside Things</h1>
+  <p class="sub">A retrospective. Josh McDougall’s practice since 2010 places games inside systems that were never meant to hold them. Please touch the art. That is the art.</p>
+
+  <section class="wall" aria-label="Works">
+    <article class="label"><span class="no">1</span>
+      <p class="artist">Josh McDougall <span>(Abstrct)</span></p>
+      <p class="work"><a href="https://schemaverse.com">Schemaverse</a>, 2011</p>
+      <p class="medium">PostgreSQL, PL/pgSQL, 108 players</p>
+      <p class="credit">First shown at DEF CON 19</p>
+      <p class="text">The artist placed a space war inside a relational database and invited strangers to attack it. Over four days they ran more than a million queries. The database survived. The strangers report mixed results.</p>
+    </article>
+
+    <article class="label"><span class="no">2</span>
+      <p class="artist">Josh McDougall <span>(Abstrct)</span></p>
+      <p class="work">Coindroids, 2014–2020</p>
+      <p class="medium">DEFCOIN, robots, money</p>
+      <p class="credit">Shown at DEF CON 22 through 28</p>
+      <p class="text">Robots shoot money at each other. At DEF CON 26 the work accounted for more than half of all DEFCOIN transactions, making it one of the few artworks that is also an economy.</p>
+    </article>
+
+    <article class="label"><span class="no">3</span>
+      <p class="artist">Josh McDougall <span>(Abstrct)</span>, with Slow Ninja</p>
+      <p class="work"><a href="https://playstructs.com">Structs</a>, ongoing</p>
+      <p class="medium">Its own blockchain, Alpha Matter, humans, AI agents</p>
+      <p class="credit">Collection of the players</p>
+      <p class="text">A space strategy game that runs on its own chain. Several of its players are not people. The artist considers this a feature.</p>
+    </article>
+
+    <article class="label"><span class="no">4–7</span>
+      <p class="artist">Josh McDougall <span>(Abstrct)</span></p>
+      <p class="work">Four Studies of Structs, 2026</p>
+      <p class="medium">Toy box (<a href="https://pippop.pet">pippop</a>), dragons (<a href="https://wyrmhodl.com">wyrmhodl</a>), Dreamcast (<a href="https://structs.xyz">structs.xyz</a>), fur (<a href="https://furrency.com">Furrency</a>)</p>
+      <p class="text">The same game, painted four more times. Compare the artist’s other series, “The Same Game, Painted Again.”</p>
+    </article>
+
+    <article class="label"><span class="no">8</span>
+      <p class="artist">Josh McDougall <span>(Abstrct)</span></p>
+      <p class="work"><a href="https://toronto.ad">Toronto Games</a>, 2026</p>
+      <p class="medium">65816 assembly on Super Nintendo, 512 KB</p>
+      <p class="text">Seven events across Toronto, including Bike Courier, Off-Leash Alert and TTC Surfing. Visitors are encouraged to attempt Parallel Parking in the Annex and to manage their expectations.</p>
+    </article>
+
+    <article class="label"><span class="no">9</span>
+      <p class="artist">Josh McDougall <span>(Abstrct)</span>, with others</p>
+      <p class="work">Untitled (Standard), 2015</p>
+      <p class="medium">The CryptoCurrency Security Standard</p>
+      <p class="credit">Collection of <a href="https://cryptoconsortium.org">C4</a>, co-founded by the artist, 2014</p>
+      <p class="text">A rare work in which the artist writes the rules rather than playing inside them. Critics remain divided over whether this is irony.</p>
+    </article>
+
+    <article class="label"><span class="no">10</span>
+      <p class="artist">Josh McDougall <span>(Abstrct)</span></p>
+      <p class="work"><a href="https://soundcloud.com/abstrct">DJ sets</a>, ongoing</p>
+      <p class="medium">Sound, dimensions variable</p>
+      <p class="text">Best experienced loud, late and standing up.</p>
+    </article>
+  </section>
+
+  <nav class="exit" aria-label="Gift shop"><strong>Exit through the gift shop</strong>
+    <a href="https://slow.ninja">Slow Ninja</a>
+    <a href="https://github.com/abstrct">GitHub</a>
+    <a href="https://x.com/abstr_ct">@abstr_ct</a>
+    <a href="https://tokens.fyi">Tokens.fyi</a>
+    <a href="https://ceremony.guide">Key Ceremony Guide</a>
+  </nav>
+</main>
+</body>
+</html>

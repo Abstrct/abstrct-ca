@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Josh McDougall · Get</title>
+  <link rel="icon" href="/hippo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #FFFFFF; --ink: #111; --dim: #6E6E73; --rule: #E5E5EA; --accent: #0A66FF; --card: #F5F5F7; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0E0E10; --ink: #F2F2F5; --dim: #9A9AA1; --rule: #2A2A2E; --accent: #4D8DFF; --card: #1B1B1E; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.45 'Figtree', system-ui, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .head { display: flex; gap: 20px; align-items: center; }
+    .icon { width: 116px; height: 116px; border-radius: 26px; background: #F7E1DC; display: grid; place-items: center; flex: none; }
+    .icon img { width: 92px; height: 92px; }
+    h1 { margin: 0; font-size: 28px; font-weight: 800; }
+    .sub { margin: 2px 0 12px; color: var(--dim); }
+    .get { display: inline-block; background: var(--accent); color: #fff; font-weight: 800; padding: 6px 20px; border-radius: 999px; }
+    .get:hover { text-decoration: none; filter: brightness(1.1); }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); margin: 26px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .stats div { padding: 12px 6px; text-align: center; border-left: 1px solid var(--rule); }
+    .stats div:first-child { border-left: none; }
+    .stats small { display: block; color: var(--dim); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .stats b { display: block; font-size: 20px; margin: 2px 0; }
+    h2 { font-size: 22px; margin: 32px 0 10px; }
+    .new small { color: var(--dim); }
+    .reviews { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+    .review { background: var(--card); border-radius: 14px; padding: 14px 16px; }
+    .review b { display: block; }
+    .stars { color: #FF9F0A; letter-spacing: 2px; }
+    .review small { color: var(--dim); }
+    .review p { margin: 6px 0 0; font-size: 15px; }
+    dl { display: grid; grid-template-columns: 160px 1fr; gap: 8px 16px; margin: 0; }
+    dt { color: var(--dim); }
+    dd { margin: 0; }
+    .shots { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; }
+    .shot { flex: none; width: 200px; height: 130px; border-radius: 14px; display: flex; align-items: flex-end; padding: 12px; font-weight: 800; font-size: 18px; color: #fff; }
+    @media (max-width: 560px) { .stats { grid-template-columns: repeat(2, 1fr); } .stats div:nth-child(3) { border-left: none; } dl { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="head">
+    <div class="icon"><img src="/hippo.svg" alt=""></div>
+    <div>
+      <h1>Josh McDougall</h1>
+      <p class="sub">Puts games inside things · Abstrct</p>
+      <a class="get" href="https://github.com/abstrct">GET</a>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div><small>Players</small><b>108</b><small>DEF CON 19</small></div>
+    <div><small>Age</small><b>4+</b><small>contains SQL</small></div>
+    <div><small>Category</small><b>Games</b><small>all of them</small></div>
+    <div><small>Developer</small><b>Slow Ninja</b><small>since 2014</small></div>
+  </div>
+
+  <h2>Screenshots</h2>
+  <div class="shots">
+    <a class="shot" href="https://schemaverse.com" style="background:#2F5BFF">Schemaverse</a>
+    <span class="shot" style="background:#D98E04">Coindroids</span>
+    <a class="shot" href="https://playstructs.com" style="background:#6B4FD8">Structs</a>
+    <a class="shot" href="https://toronto.ad" style="background:#D93A3A">Toronto Games</a>
+    <a class="shot" href="https://soundcloud.com/abstrct" style="background:#1B1B1B">DJ sets</a>
+  </div>
+
+  <h2>What’s New</h2>
+  <div class="new">
+    <p><small>Version 2026</small></p>
+    <ul>
+      <li>Added <a href="https://toronto.ad">Toronto Games</a>, a Super Nintendo game. Includes TTC Surfing.</li>
+      <li>Structs is now also available as a toy box (<a href="https://pippop.pet">pippop</a>), dragons (<a href="https://wyrmhodl.com">wyrmhodl</a>), a Dreamcast game (<a href="https://structs.xyz">structs.xyz</a>) and fur beasts (<a href="https://furrency.com">Furrency</a>).</li>
+      <li>Fixed a bug where Coindroids had a website.</li>
+      <li>Performance improvements. Vowel count unchanged.</li>
+    </ul>
+  </div>
+
+  <h2>Ratings &amp; Reviews</h2>
+  <div class="reviews">
+    <div class="review"><b>Put a war in my database</b><span class="stars" aria-label="5 stars">★★★★★</span><small>a DBA</small><p>I came for the PostgreSQL. I stayed because my fleet was a table and I wanted it back.</p></div>
+    <div class="review"><b>A robot shot me with money</b><span class="stars" aria-label="5 stars">★★★★★</span><small>a DEF CON attendee</small><p>Then I shot it back with money. Nobody won but the economy.</p></div>
+    <div class="review"><b>Too many outfits</b><span class="stars" aria-label="4 stars">★★★★☆</span><small>a confused player</small><p>Is it a toy box or a dragon? Apparently it’s both, and also Structs.</p></div>
+    <div class="review"><b>Wrote the rules</b><span class="stars" aria-label="5 stars">★★★★★</span><small>a compliance officer</small><p>Co-founded <a href="https://cryptoconsortium.org">C4</a> and helped write a real security standard. Suspicious, given everything else.</p></div>
+  </div>
+
+  <h2>Information</h2>
+  <dl>
+    <dt>Developer</dt><dd><a href="https://slow.ninja">Slow Ninja</a></dd>
+    <dt>Size</dt><dd>512 KB (Toronto Games ROM)</dd>
+    <dt>Compatibility</dt><dd>PostgreSQL, DEFCOIN, Cosmos, Super Nintendo</dd>
+    <dt>In-app purchases</dt><dd>DEFCOIN</dd>
+    <dt>Also by this developer</dt><dd><a href="https://tokens.fyi">Tokens.fyi</a>, <a href="https://ceremony.guide">Key Ceremony Guide</a></dd>
+    <dt>Support</dt><dd><a href="https://github.com/abstrct">github.com/abstrct</a> · <a href="https://x.com/abstr_ct">@abstr_ct</a></dd>
+  </dl>
+</main>
+</body>
+</html>

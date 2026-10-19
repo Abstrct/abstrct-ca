@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ABSTRCT(1)</title>
+  <link rel="icon" href="/hippo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #0C0C0C; --ink: #D7D7D2; --hi: #FFFFFF; --dim: #8A8A84; --u: #7FD1B9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.6 'JetBrains Mono', ui-monospace, monospace; }
+    main { max-width: 80ch; margin: 0 auto; padding: 36px 20px 64px; }
+    .bar { display: flex; justify-content: space-between; gap: 12px; color: var(--hi); }
+    .bar span:nth-child(2) { color: var(--dim); }
+    h2 { color: var(--hi); font-size: 15px; font-weight: 700; margin: 26px 0 4px; }
+    p { margin: 0 0 10px 7ch; }
+    dl { margin: 0 0 0 7ch; }
+    dt { color: var(--hi); font-weight: 700; }
+    dd { margin: 0 0 10px 7ch; }
+    b { color: var(--hi); }
+    u, a { color: var(--u); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--hi); }
+    .cursor { display: inline-block; width: 0.6em; height: 1.1em; background: var(--ink); vertical-align: -0.2em; animation: blink 1.1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (max-width: 560px) { p, dl { margin-left: 2ch; } dd { margin-left: 3ch; } .bar span:nth-child(2) { display: none; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="bar"><span>ABSTRCT(1)</span><span>General Commands Manual</span><span>ABSTRCT(1)</span></div>
+
+  <h2>NAME</h2>
+  <p><b>abstrct</b> — put a game inside something that is not a game</p>
+
+  <h2>SYNOPSIS</h2>
+  <p><b>abstrct</b> [<b>-q</b>] [<b>--reskin</b>] [<b>--loud</b>] <u>medium</u></p>
+
+  <h2>DESCRIPTION</h2>
+  <p><b>abstrct</b> takes a system that was never meant to hold a game and writes a game into it. Also known as Josh McDougall.</p>
+  <p>The following media are supported:</p>
+  <dl>
+    <dt>postgresql</dt>
+    <dd><a href="https://schemaverse.com">Schemaverse</a>. A space war played in SQL. Fleets are rows, attacks are queries. First run at DEF CON 19, 2011: 108 players, over a million queries, four days.</dd>
+    <dt>defcoin</dt>
+    <dd>Coindroids. Robots that shoot money at each other. DEF CON 22 through 28.</dd>
+    <dt>blockchain</dt>
+    <dd><a href="https://playstructs.com">Structs</a>. A space strategy game on its own chain. Some of the players are AI agents.</dd>
+    <dt>snes</dt>
+    <dd><a href="https://toronto.ad">Toronto Games</a>. 65816 assembly. Events include TTC Surfing.</dd>
+  </dl>
+
+  <h2>OPTIONS</h2>
+  <dl>
+    <dt>-q, --quickly</dt>
+    <dd>Build it while the conference is already happening. See <a href="https://tokens.fyi">tokens.fyi</a> and <a href="https://ceremony.guide">ceremony.guide</a>.</dd>
+    <dt>--reskin</dt>
+    <dd>Release an existing game again in a new outfit. Structs currently ships as <a href="https://pippop.pet">pippop</a>, <a href="https://wyrmhodl.com">wyrmhodl</a>, <a href="https://structs.xyz">structs.xyz</a> and <a href="https://furrency.com">Furrency</a>.</dd>
+    <dt>--standards</dt>
+    <dd>Write the rules instead of finding the gaps in them. Co-founded <a href="https://cryptoconsortium.org">C4</a>; helped write the CryptoCurrency Security Standard. Rarely passed.</dd>
+    <dt>--loud</dt>
+    <dd>DJ instead. Output goes to <a href="https://soundcloud.com/abstrct">soundcloud</a>.</dd>
+  </dl>
+
+  <h2>ENVIRONMENT</h2>
+  <dl>
+    <dt>SLOW_NINJA</dt>
+    <dd>The studio. Set to <a href="https://slow.ninja">https://slow.ninja</a>.</dd>
+  </dl>
+
+  <h2>EXIT STATUS</h2>
+  <p><b>abstrct</b> does not exit.</p>
+
+  <h2>BUGS</h2>
+  <p>Will turn the device you are reading this on into a game if left unattended.</p>
+  <p>The name is missing a vowel. This is not a bug.</p>
+
+  <h2>SEE ALSO</h2>
+  <p><a href="https://github.com/abstrct">github(1)</a>, <a href="https://x.com/abstr_ct">x(1)</a>, psql(1)</p>
+
+  <h2>HISTORY</h2>
+  <p><b>abstrct</b> first appeared on GitHub in 2010.</p>
+
+  <div class="bar" style="margin-top: 32px"><span>Abstrct</span><span>October 2026</span><span>ABSTRCT(1)</span></div>
+  <p style="margin: 18px 0 0">:<span class="cursor" aria-hidden="true"></span></p>
+</main>
+</body>
+</html>

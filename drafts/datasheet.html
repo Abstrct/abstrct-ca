@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ABS-1 Game Insertion Controller · Datasheet</title>
+  <link rel="icon" href="/hippo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink: #111; --dim: #555; --rule: #C9CED6; --brand: #0B3D91; --tint: #EEF2F8; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #DADDE2; color: var(--ink); font: 15px/1.5 'IBM Plex Sans', system-ui, sans-serif; }
+    .sheet { max-width: 920px; margin: 32px auto 72px; background: #fff; box-shadow: 0 18px 40px rgba(0,0,0,.1); }
+    a { color: var(--brand); }
+    .top { background: var(--brand); color: #fff; padding: 18px 28px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+    .top b { font-size: 26px; letter-spacing: 0.02em; }
+    .top span { font: 13px 'IBM Plex Mono', monospace; opacity: .9; }
+    .inner { padding: 22px 28px 32px; }
+    h1 { margin: 0 0 4px; font-size: 28px; }
+    .tag { margin: 0 0 18px; color: var(--dim); }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brand); border-bottom: 2px solid var(--brand); padding-bottom: 4px; margin: 24px 0 10px; }
+    ul { margin: 0; padding-left: 18px; }
+    li { margin: 3px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    th { background: var(--tint); font-weight: 600; }
+    td.mono, th.mono { font-family: 'IBM Plex Mono', monospace; }
+    figure { margin: 0; }
+    figure svg { width: 100%; height: auto; display: block; }
+    figcaption { font-size: 13px; color: var(--dim); margin-top: 6px; }
+    .foot { display: flex; justify-content: space-between; border-top: 1px solid var(--rule); margin-top: 28px; padding-top: 10px; font-size: 12px; color: var(--dim); }
+    @media (max-width: 700px) { .cols { grid-template-columns: 1fr; } .inner { padding: 18px 16px 24px; } }
+  </style>
+</head>
+<body>
+<article class="sheet">
+  <div class="top"><b>ABS-1</b><span>Datasheet · Rev. 2026-10 · Abstrct</span></div>
+  <div class="inner">
+    <h1>Game Insertion Controller</h1>
+    <p class="tag">Puts a game into any system not rated for one. Also known as Josh McDougall.</p>
+
+    <div class="cols">
+      <div>
+        <h2>Features</h2>
+        <ul>
+          <li>Accepts databases, cryptocurrencies, blockchains and 16-bit consoles as input</li>
+          <li>Proven in the field: 108 players, over a million queries, four days (DEF CON 19)</li>
+          <li>Hot-swappable outfits for existing games</li>
+          <li>Rapid build mode, triggered by a conference already in progress</li>
+          <li>Integrated standards module (rarely engaged)</li>
+          <li>Audio output</li>
+        </ul>
+        <h2>Applications</h2>
+        <ul>
+          <li><a href="https://schemaverse.com">Schemaverse</a>: a space war in PostgreSQL</li>
+          <li>Coindroids: robots that shoot money, DEF CON 22–28</li>
+          <li><a href="https://playstructs.com">Structs</a>: a space game on its own chain, for humans and AI agents</li>
+          <li><a href="https://toronto.ad">Toronto Games</a>: a Super Nintendo game about Toronto</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Functional block diagram</h2>
+        <figure>
+          <svg viewBox="0 0 400 220" role="img" aria-label="Block diagram: any medium goes into ABS-1, which outputs a game. Side inputs: conference trigger and standards enable. Audio output to the DJ booth.">
+            <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#111">
+              <rect x="150" y="60" width="110" height="100" fill="#EEF2F8" stroke="#0B3D91" stroke-width="2"/>
+              <text x="205" y="105" text-anchor="middle" font-size="16" font-weight="600">ABS-1</text>
+              <text x="205" y="124" text-anchor="middle" font-size="10" fill="#555">GAME INSERTION</text>
+              <text x="10" y="88">MEDIUM</text><text x="10" y="102" fill="#555" font-size="10">(not a game)</text>
+              <path d="M84 98h66" stroke="#111" stroke-width="2"/><path d="M142 93l8 5-8 5" fill="#111"/>
+              <path d="M260 98h60" stroke="#111" stroke-width="2"/><path d="M312 93l8 5-8 5" fill="#111"/>
+              <text x="326" y="102">GAME</text>
+              <path d="M180 20v40" stroke="#111" stroke-width="2"/><text x="120" y="16">CONF_TRIG</text>
+              <path d="M230 20v40" stroke="#111" stroke-width="2" stroke-dasharray="4 3"/><text x="226" y="16">STD_EN</text>
+              <path d="M205 160v40" stroke="#111" stroke-width="2"/><text x="214" y="204">AUDIO_OUT → DJ</text>
+            </g>
+          </svg>
+          <figcaption>Figure 1. Functional block diagram. STD_EN is shown dashed because it is rarely driven.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <h2>Pin configuration</h2>
+    <table>
+      <thead><tr><th class="mono">Pin</th><th class="mono">Name</th><th>Function</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">1</td><td class="mono">SQL</td><td>PostgreSQL input. See <a href="https://schemaverse.com">Schemaverse</a>.</td></tr>
+        <tr><td class="mono">2</td><td class="mono">DFC</td><td>DEFCOIN input. Robots shoot money on this pin.</td></tr>
+        <tr><td class="mono">3</td><td class="mono">CHAIN</td><td>Blockchain input. See <a href="https://playstructs.com">Structs</a>, by <a href="https://slow.ninja">Slow Ninja</a>.</td></tr>
+        <tr><td class="mono">4</td><td class="mono">RESKIN</td><td>Outputs the same game in a new outfit: <a href="https://pippop.pet">pippop</a>, <a href="https://wyrmhodl.com">wyrmhodl</a>, <a href="https://structs.xyz">structs.xyz</a>, <a href="https://furrency.com">Furrency</a>.</td></tr>
+        <tr><td class="mono">5</td><td class="mono">SNES</td><td>16-bit output. See <a href="https://toronto.ad">Toronto Games</a>.</td></tr>
+        <tr><td class="mono">6</td><td class="mono">CONF_TRIG</td><td>Rapid build. Pulled high during conferences. See <a href="https://tokens.fyi">Tokens.fyi</a>, <a href="https://ceremony.guide">Key Ceremony Guide</a>.</td></tr>
+        <tr><td class="mono">7</td><td class="mono">STD_EN</td><td>Standards enable. Writes rules instead of gaps. See <a href="https://cryptoconsortium.org">C4</a> and the CryptoCurrency Security Standard.</td></tr>
+        <tr><td class="mono">8</td><td class="mono">AUDIO_OUT</td><td>Line out to <a href="https://soundcloud.com/abstrct">SoundCloud</a>. Loud.</td></tr>
+        <tr><td class="mono">9</td><td class="mono">NC</td><td>No connection. Do not ask why.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Absolute maximum ratings</h2>
+    <table>
+      <thead><tr><th>Parameter</th><th>Rating</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Concurrent players</td><td class="mono">108</td><td>Tested at DEF CON 19</td></tr>
+        <tr><td>Queries</td><td class="mono">1,000,000+ / 4 days</td><td>Database survived</td></tr>
+        <tr><td>Share of DEFCOIN transactions</td><td class="mono">56%</td><td>DEF CON 26, robots only</td></tr>
+        <tr><td>ROM size</td><td class="mono">512 KB</td><td>Toronto Games</td></tr>
+        <tr><td>Vowels</td><td class="mono">rated − 1</td><td>By design</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Ordering information</h2>
+    <p>Not for sale. Available for viewing at <a href="https://github.com/abstrct">github.com/abstrct</a> and <a href="https://x.com/abstr_ct">@abstr_ct</a>.</p>
+
+    <div class="foot"><span>ABS-1 · Abstrct</span><span>Page 1 of 1</span></div>
+  </div>
+</article>
+</body>
+</html>
